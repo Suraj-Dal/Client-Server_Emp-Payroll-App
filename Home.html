@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/homestyle.css">
+        <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Josefin+Sans:wght@300&family=Pacifico&display=swap" rel="stylesheet">    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <title>Employee Payroll-Home</title>
+        <script src="Javascript/home-Local.js"></script>
+        <script src="Javascript/EmployeeModel.js"></script>
+        <script src="Javascript/SiteProperties.js"></script>
+        <script src="Javascript/Utility.js"></script>
+        <script src="Javascript/HTTPServices.js"></script>
+    </head>
+    <body>
+        <header>
+            <!--UC1-to create an Employee Payroll System Home Page UI-->
+            <div class="header-content">
+                <img src="Images/logo.png">
+                <div>
+                    <h3 class="Employee">Employee</h3>
+                    <h3 class="Payroll">Payroll</h3>
+                </div>
+            </div>
+        </header>
+        <!--UC2 Employee payroll form Header and name-->
+        <div class="main-content">
+                <div class="employee-details">Employee Details
+                    <div class="emp-count">1</div>
+                </div>
+                <a href="AddEmployee.html" class="add-button" target="_blank">
+                    <img src="Images/add-24px.svg" alt="">Add User</a>
+        </div>
+        <div class="table main">
+            <table id="table-display" class="table">
+            </table>
+        </div> 
+    </div>
+    </body>
+</html>

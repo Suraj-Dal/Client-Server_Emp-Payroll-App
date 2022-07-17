@@ -1,0 +1,85 @@
+*
+{
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url('../Images/LoginBackground.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box
+{
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(0,0,0,0.3);
+    text-align: center;
+    border-radius: 15px;
+}
+.box h1{
+    color: rgb(21, 21, 21);
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: 'Josefin Sans', sans-serif;
+    text-shadow: 1px 1px 1px rgb(62, 63, 63)
+}
+.box input[type="text"],.box input[type="password"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #4c4b4b;
+    padding: 14px 10px;
+    width: 220px;
+    outline: none;
+    border-radius: 24px;
+    transition: 0.25px;
+}
+.box input[type="text"]:focus,.box input[type="password"]:focus
+{
+    width: 240px;
+    border-color: yellow;
+}
+.box input[type="submit"]
+{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 3px solid #4c4b4b;
+    padding: 14px 25px;
+    outline: none;
+    color: #282222;
+    border-radius: 24px;
+    transition: 0.25px;
+    cursor: pointer;
+}
+.box input[type="submit"]:hover
+{
+    border-color: yellow;
+}
+.header-content
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    font-family:'Josefin Sans', sans-serif;
+    align-items: center;
+    width: 18%;
+    font-size: large;
+    text-transform: uppercase;
+    text-shadow: 0.5px 0.5px 0.5px black;
+}
+.Employee
+{
+    color: #82a70c;
+}
