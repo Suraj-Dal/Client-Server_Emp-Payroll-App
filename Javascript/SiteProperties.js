@@ -3,5 +3,6 @@ const SiteProperties = {
     LoginPage: "../login.html",
     HomePage: "../Home.html",
     AddEmployee: "../AddEmployee.html",
-    server_url: "http://http://127.0.0.1:3000/EmployeeDB/"
+    server_url: "http://localhost:3000/employee/"
+    
 };

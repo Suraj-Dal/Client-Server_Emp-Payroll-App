@@ -66,17 +66,21 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }
 });
 
-const getEmployeeData = () => {
+function getEmployeeData()
+{
   empPayrollList = localStorage.getItem('EmployeePayrollList') ? JSON.parse(localStorage.getItem('EmployeePayrollList')) : [];
   processEmployeePayrollDataResponse();
 }
-const processEmployeePayrollDataResponse = () =>{
+
+function processEmployeePayrollDataResponse()
+{
   document.querySelector(".emp-count").textContent = empPayrollList.length;
   createInnerHTML();
   localStorage.removeItem('editEmp');
 }
 
-const getEmployeeDateFromServer =() =>{
+function getDataFromServer() 
+{
   makeServiceCall("GET", SiteProperties.server_url, true)
       .then(responseText =>{
           empPayrollList = JSON.parse(responseText);
@@ -91,7 +95,7 @@ const getEmployeeDateFromServer =() =>{
 
 const createInnerHTML = () => {
     const headerHtml = "<th></th><th>Name</th><th>Gender</th><th>Department</th>"+
-                     "<th>Salary</th><th>Start Date</th><th>Actions</th>";
+                     "<th>Salary</th><th>Start Date</th><th>Action</th>";
     if (empPayrollList.length == 0) return;
     let innerHtml = `${headerHtml}`;
     for (const empPayrollData of empPayrollList) {

@@ -10,6 +10,7 @@ function update(node)
     if(!employeeData){return;} 
     localStorage.setItem('editEmp', JSON.stringify(employeeData));
     window.open(SiteProperties.AddEmployee);
+    
 }
 
 function remove(node)
@@ -19,9 +20,23 @@ function remove(node)
     return;
     const index = empPayrollList.map(emp => emp.id).indexOf(empData.id);
     empPayrollList.splice(index, 1);
-    localStorage.setItem("EmployeePayrollList", JSON.stringify(empPayrollList));
-    createInnerHTML();
-    window.location.replace(SiteProperties.HomePage);
+    if(SiteProperties.use_local_storage.match("true"))
+    {
+        localStorage.setItem("EmployeePayrollList", JSON.stringify(empPayrollList));
+        document.querySelector('.emp-count').textContent = empPayrollList.length;
+        createInnerHTML();
+        window.location.replace(SiteProperties.HomePage);
+    }
+    else{
+        const deleteUrl = SiteProperties.server_url + empData.id.toString();
+        makeServiceCall("DELETE", deleteUrl, false)
+            .then(responseText =>{
+                createInnerHTML();
+            })
+            .catch(error =>{
+                console.log("Delete Error Status: " + JSON.stringify(error));
+            });
+    }
 }
 function checkName(name)
 {

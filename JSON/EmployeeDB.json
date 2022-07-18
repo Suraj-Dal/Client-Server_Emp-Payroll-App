@@ -1,52 +1,29 @@
 {
-    "employee": [
-      {
-        "name": "Suraj Dal",
-        "gender": "male",
-        "departMent": [
-          "Engineering"
-        ],
-        "salary": "30000",
-        "startDate": "10 May 2022",
-        "notes": "",
-        "id": 4,
-        "profileUrl": "../Images/Ellipse -3.png"
-      },
-      {
-        "name": "Sanket Dal",
-        "gender": "male",
-        "departMent": [
-          "Sales"
-        ],
-        "salary": "30000",
-        "startDate": "1 Jan 2022",
-        "notes": "",
-        "id": 3,
-        "profileUrl": "../Images/Ellipse -2.png"
-      },
-      {
-        "name": "Suraj",
-        "gender": "male",
-        "departMent": [
-          "Engineering"
-        ],
-        "salary": "30000",
-        "startDate": "1 June 2022",
-        "notes": "",
-        "id": 1,
-        "profileUrl": "../Images/Ellipse -3.png"
-      },
-      {
-        "name": "Pooja Jadhav",
-        "gender": "female",
-        "departMent": [
-          "HR"
-        ],
-        "salary": "30000",
-        "startDate": "17 Jan 2022",
-        "notes": "",
-        "id": 2,
-        "profileUrl": "../Images/Ellipse -1.png"
-      }
-    ]
-  }
+  "employee": [
+    {
+      "_name": "Suraj Dal",
+      "_profilePic": "Images/Ellipse -2.png",
+      "_gender": "Male",
+      "_department": [
+        "Engineer"
+      ],
+      "_salary": "368000",
+      "_notes": "",
+      "_startDate": "2022-06-30T18:30:00.000Z",
+      "id": 1
+    },
+    {
+      "_name": "Pooja Jadhav",
+      "_profilePic": "Images/Ellipse -1.png",
+      "_gender": "Female",
+      "_department": [
+        "Sales",
+        "Engineer"
+      ],
+      "_salary": "433000",
+      "_notes": "undefined",
+      "_startDate": "2000-12-31T18:30:00.000Z",
+      "id": 2
+    }
+  ]
+}

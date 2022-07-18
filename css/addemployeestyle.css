@@ -207,3 +207,80 @@ select
 .reset:hover{
     background-color: aquamarine;
 }
+.button 
+{
+    display: flex; 
+    flex-direction: row;
+    margin-bottom: 20px; 
+    align-items: center; 
+    border: 0px solid green; 
+    flex-wrap: nowrap;
+}
+.salary 
+{
+    display: flex; 
+    flex-direction: row;
+    width: 100%;
+}
+@media screen and (max-width:960px){
+    .header-content
+    {
+        width: 50%;
+    }
+    .form
+    {
+        width:90%;
+        padding: 15px 20px;
+    }
+    .profile
+    {
+        flex-flow: wrap;
+    }
+    .salary
+    {
+        display: flex; 
+        flex-direction: row;
+    }
+    .salary-output
+    {
+        font-size: small;
+    }
+    .row-content
+    {
+        font-size: smaller;
+        flex-flow: wrap;
+    }
+    label 
+    {
+        padding: 8px 8px 8px 0;
+        display: inline-block; 
+    }
+    .button
+    {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .cancel, .submit, .reset
+    {
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width:480px){
+    body 
+    {
+        margin: 0;
+        height: 100%;
+        background: rgb(209, 209, 209);
+        width: 125%;
+    }
+    .form 
+    {
+        width: 100%;
+        padding: 60px 70px;
+    }
+    .header-content
+    {
+        width: 50%;
+    }
+}

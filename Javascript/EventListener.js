@@ -35,8 +35,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 function save(event)
 {
-    event.preventDefault();
-    event.stopPropagation();
+    //event.preventDefault();
+    //event.stopPropagation();
     try{
     setEmployeePayrollObject();
     if(SiteProperties.use_local_storage.match("true")){
@@ -46,6 +46,7 @@ function save(event)
     }
     else{
         createEmployeeJsonServer();
+        resetForm();
     }
 }
 catch (ex)
@@ -55,6 +56,25 @@ catch (ex)
     //let employeePayrollData = createEmployeePayroll();
     //createAndUpdateStorage(employeePayrollData);
 }
+
+function createEmployeeJsonServer()
+{
+    let postUrl = SiteProperties.server_url;
+    let methodCall = "POST";
+    if(isUpdate){
+        methodCall = "PUT";
+        postUrl = SiteProperties.server_url + employeePayrollObject.id.toString();
+    }
+    makeServiceCall(methodCall, postUrl, true, employeePayrollObject)
+        .then(responseText =>{
+            resetForm();
+            window.location.replace(SiteProperties.HomePage);
+        })
+        .catch(error =>{
+            throw error;
+        });
+}
+
 function setEmployeePayrollObject()
 {
     if(!isUpdate && SiteProperties.use_local_storage.match("true")){
